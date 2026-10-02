@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Demo Serverless</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="contenedor">
+
+    <header>
+      <span class="etiqueta">TLP IV</span>
+
+      <h1>Arquitectura Serverless</h1>
+
+      <p>
+        Demostración del funcionamiento de una función
+        Serverless ejecutada mediante una solicitud HTTP.
+      </p>
+    </header>
+
+    <section class="arquitectura">
+
+      <div class="bloque">
+        <span>1</span>
+        <strong>Usuario</strong>
+      </div>
+
+      <div class="flecha">→</div>
+
+      <div class="bloque">
+        <span>2</span>
+        <strong>Página Web</strong>
+      </div>
+
+      <div class="flecha">→</div>
+
+      <div class="bloque">
+        <span>3</span>
+        <strong>HTTP</strong>
+      </div>
+
+      <div class="flecha">→</div>
+
+      <div class="bloque">
+        <span>4</span>
+        <strong>Función Serverless</strong>
+      </div>
+
+      <div class="flecha">→</div>
+
+      <div class="bloque">
+        <span>5</span>
+        <strong>Respuesta</strong>
+      </div>
+
+    </section>
+
+    <section class="panel">
+
+      <h2>Ejecutar función</h2>
+
+      <form id="formulario">
+
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+
+          <input
+            type="text"
+            id="nombre"
+            placeholder="Ej: Facundo"
+            required
+          >
+        </div>
+
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+
+          <textarea
+            id="mensaje"
+            placeholder="Escribí un mensaje..."
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" id="boton">
+          Ejecutar función Serverless
+        </button>
+
+      </form>
+
+      <div id="estado" class="estado">
+        Esperando ejecución...
+      </div>
+
+      <div id="resultado" class="resultado oculto">
+
+        <h3>Respuesta de la función</h3>
+
+        <p>
+          <strong>Estado:</strong>
+          <span id="respuestaEstado"></span>
+        </p>
+
+        <p>
+          <strong>Nombre:</strong>
+          <span id="respuestaNombre"></span>
+        </p>
+
+        <p>
+          <strong>Mensaje:</strong>
+          <span id="respuestaMensaje"></span>
+        </p>
+
+        <p>
+          <strong>Hora de ejecución:</strong>
+          <span id="respuestaHora"></span>
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
